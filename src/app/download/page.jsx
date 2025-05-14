@@ -11,6 +11,7 @@ import { AiFillAndroid, AiFillApple } from 'react-icons/ai';
 import Button from '@/components/ui/Button';
 import styles from '@/styles/pages/Download.module.scss';
 
+// Клиентский компонент для содержимого
 function DownloadContent() {
   const [selectedPlatform, setSelectedPlatform] = useState('android');
   const searchParams = useSearchParams();
@@ -196,9 +197,23 @@ function DownloadContent() {
   );
 }
 
+// Компонент загрузки
+function LoadingFallback() {
+  return (
+    <div className={styles.downloadPage}>
+      <div className="container">
+        <div className={styles.loadingState}>
+          <h1>Загрузка...</h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Основной компонент страницы
 export default function Download() {
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
+    <Suspense fallback={<LoadingFallback />}>
       <DownloadContent />
     </Suspense>
   );
