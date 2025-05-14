@@ -1,6 +1,6 @@
 // styles/_mixins.scss
 
-@import './variables';
+@use './variables' as *;
 
 // Медиа-запросы
 @mixin sm {

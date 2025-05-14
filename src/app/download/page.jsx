@@ -2,7 +2,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -11,7 +11,7 @@ import { AiFillAndroid, AiFillApple } from 'react-icons/ai';
 import Button from '@/components/ui/Button';
 import styles from '@/styles/pages/Download.module.scss';
 
-export default function Download() {
+function DownloadContent() {
   const [selectedPlatform, setSelectedPlatform] = useState('android');
   const searchParams = useSearchParams();
 
@@ -193,5 +193,13 @@ export default function Download() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Download() {
+  return (
+    <Suspense fallback={<div>Загрузка...</div>}>
+      <DownloadContent />
+    </Suspense>
   );
 }
