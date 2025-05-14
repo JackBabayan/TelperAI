@@ -3,8 +3,8 @@
 import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { ThemeProvider } from 'next-themes';
-import '@/styles//main.scss';
+import ThemeProvider from '@/components/providers/ThemeProvider';
+import '@/styles/main.scss';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider>
           <Header />
           <main>{children}</main>
           <Footer />

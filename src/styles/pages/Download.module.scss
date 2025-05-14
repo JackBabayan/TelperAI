@@ -1,7 +1,7 @@
 // styles/pages/Download.module.scss
 
-@import '@/styles/variables';
-@import '@/styles/mixins';
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .downloadPage {
   padding: 5rem 0;

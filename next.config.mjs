@@ -7,10 +7,10 @@ const nextConfig = {
       domains: ['localhost'], // Добавьте здесь домены для изображений, если необходимо
     },
     sassOptions: {
-      includePaths: ['./styles'],
+      includePaths: ['./src/styles'],
       prependData: `
-        @import "@/styles/_variables.scss";
-        @import "@/styles/_mixins.scss";
+        @use "@/styles/_variables" as *;
+        @use "@/styles/_mixins" as *;
       `,
     },
     webpack: (config) => {
