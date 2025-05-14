@@ -4,7 +4,13 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-      domains: ['localhost'], // Добавьте здесь домены для изображений, если необходимо
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**',
+        },
+      ],
+      unoptimized: true, // Отключаем оптимизацию изображений для статического экспорта
     },
     sassOptions: {
       includePaths: ['./src/styles'],
@@ -21,6 +27,7 @@ const nextConfig = {
       
       return config;
     },
+    output: 'export', // Добавляем статический экспорт
   }
   
   // Используем export default вместо module.exports для ES Modules

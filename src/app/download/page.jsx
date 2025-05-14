@@ -15,6 +15,7 @@ import styles from '@/styles/pages/Download.module.scss';
 function DownloadContent() {
   const [selectedPlatform, setSelectedPlatform] = useState('android');
   const searchParams = useSearchParams();
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
     // Проверяем хэш в URL
@@ -27,6 +28,35 @@ function DownloadContent() {
     if (platform === 'android' || platform === 'ios') {
       setSelectedPlatform(platform);
     }
+
+    // Предзагрузка изображений
+    const preloadImages = async () => {
+      const imageUrls = [
+        '/images/android-mockup.png',
+        '/images/ios-mockup.png',
+        '/images/android-qr.png',
+        '/images/ios-qr.png'
+      ];
+
+      try {
+        await Promise.all(
+          imageUrls.map(url => {
+            return new Promise((resolve, reject) => {
+              const img = new Image();
+              img.onload = resolve;
+              img.onerror = resolve; // Разрешаем промис даже при ошибке
+              img.src = url;
+            });
+          })
+        );
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error('Error preloading images:', error);
+        setImagesLoaded(true); // Все равно устанавливаем true, чтобы показать контент
+      }
+    };
+
+    preloadImages();
   }, [searchParams]);
 
   const platforms = {
@@ -67,6 +97,10 @@ function DownloadContent() {
       ]
     }
   };
+
+  if (!imagesLoaded) {
+    return <LoadingFallback />;
+  }
 
   return (
     <div className={styles.downloadPage}>
@@ -153,6 +187,9 @@ function DownloadContent() {
                   alt={`QR код для скачивания Tellper для ${platforms[selectedPlatform].name}`}
                   width={120}
                   height={120}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
                 />
                 <span>Сканируйте для скачивания</span>
               </div>
@@ -166,6 +203,9 @@ function DownloadContent() {
               width={300}
               height={600}
               className={styles.phoneImage}
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
             />
           </div>
         </motion.div>
