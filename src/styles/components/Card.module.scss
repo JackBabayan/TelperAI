@@ -1,0 +1,121 @@
+// styles/components/Card.module.scss
+
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.card {
+  background-color: $background-color;
+  border-radius: $border-radius-lg;
+  transition: transform $transition-normal $easing-default, 
+              box-shadow $transition-normal $easing-default;
+  overflow: hidden;
+  
+  .icon {
+    margin-bottom: 1.5rem;
+    
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $primary-color;
+    }
+  }
+  
+  .title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 1rem;
+    color: $text-color;
+  }
+  
+  .content {
+    color: $light-text-color;
+  }
+}
+
+// Варианты карточек
+.card-default {
+  padding: 2rem;
+  box-shadow: $shadow-md;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.card-feature {
+  padding: 2.5rem;
+  box-shadow: $shadow-lg;
+  text-align: center;
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    border-radius: $border-radius-full;
+    @include gradient-primary;
+    
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: white;
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.card-pricing {
+  padding: 2.5rem;
+  box-shadow: $shadow-lg;
+  border: 1px solid lighten($primary-color, 30%);
+  text-align: center;
+  
+  .title {
+    font-size: $font-size-2xl;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    
+    .period {
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      color: $light-text-color;
+    }
+  }
+  
+  .features {
+    margin-bottom: 2rem;
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba($light-text-color, 0.2);
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-xl;
+  }
+}

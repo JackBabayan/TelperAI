@@ -1,0 +1,137 @@
+@import './variables';
+@import './mixins';
+
+/* Базовые сбросы стилей */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: $text-color;
+    background-color: $background-color;
+    line-height: $line-height-normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
+
+h3 {
+    @include heading-3;
+}
+
+p {
+    @include paragraph;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color $transition-fast ease;
+
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Утилиты */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include md {
+        padding: 0 2rem;
+    }
+}
+
+.section {
+    padding: 4rem 0;
+
+    @include md {
+        padding: 6rem 0;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gradient {
+    @include gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.hide-mobile {
+    display: none;
+
+    @include md {
+        display: block;
+    }
+}
+
+.show-mobile {
+    display: block;
+
+    @include md {
+        display: none;
+    }
+}
+
+.btn {
+    &-primary {
+        @include button-primary;
+    }
+
+    &-secondary {
+        @include button-secondary;
+    }
+}
+
+/* Анимации для прокрутки */
+.fade-in {
+    @include fade-in;
+}
+
+.slide-in-up {
+    @include slide-in-up;
+}

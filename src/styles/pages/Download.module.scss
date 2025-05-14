@@ -1,0 +1,251 @@
+// styles/pages/Download.module.scss
+
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.downloadPage {
+  padding: 5rem 0;
+  
+  @include md {
+    padding: 6rem 0;
+  }
+}
+
+.pageHeader {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem;
+  
+  h1 {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    
+    @include md {
+      font-size: $font-size-5xl;
+    }
+  }
+  
+  p {
+    font-size: $font-size-lg;
+    color: $light-text-color;
+    line-height: $line-height-relaxed;
+    margin-bottom: 2rem;
+    
+    @include md {
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+.platformSelector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.platformButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-full;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  transition: all $transition-fast ease;
+  background-color: white;
+  color: $light-text-color;
+  box-shadow: $shadow-md;
+  
+  :global(.dark) & {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  svg {
+    font-size: 1.5rem;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &.active {
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: white;
+  }
+}
+
+.downloadContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 64rem;
+  margin: 0 auto 5rem;
+  
+  @include lg {
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: center;
+  }
+}
+
+.downloadInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.platformSpecs {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  
+  @include md {
+    gap: 3rem;
+  }
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.specLabel {
+  font-size: $font-size-sm;
+  color: $light-text-color;
+  margin-bottom: 0.5rem;
+}
+
+.specValue {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.platformDescription {
+  font-size: $font-size-lg;
+  color: $light-text-color;
+  line-height: $line-height-relaxed;
+  margin-bottom: 2rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: $font-size-base;
+    
+    @include md {
+      font-size: $font-size-lg;
+    }
+  }
+  
+  .featureIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: $border-radius-full;
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: white;
+    font-size: $font-size-xs;
+    flex-shrink: 0;
+  }
+}
+
+.downloadActions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  
+  span {
+    font-size: $font-size-sm;
+    color: $light-text-color;
+  }
+}
+
+.downloadImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneImage {
+  border-radius: 1.5rem;
+  box-shadow: $shadow-xl;
+  max-width: 100%;
+  height: auto;
+}
+
+.installInstructions {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #f9fafb;
+  border-radius: $border-radius-lg;
+  
+  :global(.dark) & {
+    background-color: #1f2937;
+  }
+  
+  h2 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: 2rem;
+    
+    @include md {
+      font-size: $font-size-3xl;
+    }
+  }
+}
+
+.instructionSteps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: $font-size-lg;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: -0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      color: white;
+      font-weight: $font-weight-bold;
+      border-radius: $border-radius-full;
+    }
+  }
+}
