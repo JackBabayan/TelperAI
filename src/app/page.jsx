@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -23,12 +23,12 @@ export default function Home() {
   }, [searchParams]);
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <Hero />
       <Features />
       <HowItWorks />
       <Team />
       <Contact />
-    </>
+    </Suspense>
   );
 }
