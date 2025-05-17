@@ -69,8 +69,20 @@
     justify-content: space-between;
     border-radius: $border-radius-full;
     padding: 14px 10px;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 14px;
+      bottom: 14px;
+      border-right: 2px solid rgba($text-color-secondary, 0.6);
+    }
 
     .deviceType {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
       font-weight: 600;
       min-width: 150px;
       font-size: $font-size-lg;
@@ -80,9 +92,6 @@
       cursor: pointer;
       text-decoration: none;
 
-      &:first-child {
-        border-right: 2px solid rgba($text-color-secondary, 0.6);
-      }
 
       &:hover:not(:disabled) {
         transform: translateY(-2px);

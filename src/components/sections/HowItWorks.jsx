@@ -2,16 +2,16 @@
 
 'use client';
 
-import React , {useState} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowIcon } from "@/styles/icon";
+import { ArrowIcon, IOSIcon, AndIcon } from "@/styles/icon";
 
 import styles from '@/styles/sections/HowItWorks.module.scss';
 
 const HowItWorks = () => {
 
-  const [type , setType] = useState(1)
+  const [type, setType] = useState(1)
   const steps = [
     {
       number: '01',
@@ -75,9 +75,11 @@ const HowItWorks = () => {
           </h4>
           <div className={styles.devices}>
             <div className={styles.deviceType} onClick={() => setType(1)}>
+              <AndIcon />
               Android
             </div>
             <div className={styles.deviceType} onClick={() => setType(2)}>
+              <IOSIcon />
               IOS
             </div>
           </div>
@@ -101,7 +103,7 @@ const HowItWorks = () => {
 
               <div className={styles.stepImage}>
                 <Image
-                  src={ type == 1 ? step.imageAndroid :  step.imageIOS}
+                  src={type == 1 ? step.imageAndroid : step.imageIOS}
                   alt={step.title}
                   width={300}
                   height={600}
