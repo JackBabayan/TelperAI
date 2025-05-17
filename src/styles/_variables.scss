@@ -1,24 +1,25 @@
-// styles/_variables.scss
-
 // Цветовая схема
-$primary-color: #4F46E5; // Основной фиолетовый цвет
-$secondary-color: #06B6D4; // Яркий голубой для акцентов
+$primary-color: #1B89E9;
+$secondary-color: #6366f1; 
 $background-color: #FFFFFF;
 $dark-background: #111827;
+$dark-background-light: #F0F2F2F7;
+
 $text-color: #1F2937;
+$text-color-secondary: #FFF;
 $light-text-color: #6B7280;
 $lighter-text-color: #9CA3AF;
 
 // Размеры шрифтов
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
-$font-size-3xl: 1.875rem;
-$font-size-4xl: 2.25rem;
-$font-size-5xl: 3rem;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+$font-size-5xl: 48px;
 
 // Толщина шрифтов
 $font-weight-light: 300;
@@ -35,12 +36,12 @@ $line-height-relaxed: 1.625;
 $line-height-loose: 2;
 
 // Закругление границ
-$border-radius-sm: 0.125rem;
-$border-radius-md: 0.375rem;
-$border-radius-lg: 0.5rem;
-$border-radius-xl: 0.75rem;
-$border-radius-2xl: 1rem;
-$border-radius-3xl: 1.5rem;
+$border-radius-sm: 2px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+$border-radius-xl: 12px;
+$border-radius-2xl: 16px;
+$border-radius-3xl: 24px;
 $border-radius-full: 9999px;
 
 // Медиа-запросы
@@ -70,3 +71,9 @@ $z-index-modal-backdrop: 1040;
 $z-index-modal: 1050;
 $z-index-popover: 1060;
 $z-index-tooltip: 1070;
+
+// Section paddings
+$section-padding-mobile: 64px;
+$section-padding-tablet: 80px;
+$section-padding-desktop: 128px;
+$section-margin-bottom: 64px;

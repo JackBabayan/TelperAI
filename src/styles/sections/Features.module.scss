@@ -3,71 +3,191 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-.features {
-  padding: 5rem 0;
-  position: relative;
-  
+
+.ycBanner {
+  background: #fff;
+  text-align: center;
+  font-size: $font-size-base;
+  padding: 18px 0 14px;
+  color: $text-color;
+  border-bottom: 1px solid #e5e7eb;
+
+  .yc {
+    color: #ff5722;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.featuresBg {
+  background: #f5f6fa;
+  padding: $section-padding-mobile 0;
+
   @include md {
-    padding: 6rem 0;
+    padding: $section-padding-tablet 0;
   }
-  
+
   @include lg {
-    padding: 8rem 0;
+    padding: $section-padding-desktop 0;
   }
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f9fafb;
-    z-index: -1;
-    
-    :global(.dark) & {
-      background-color: #111827;
+
+
+  .features {
+    padding: $section-padding-mobile 0;
+    position: relative;
+
+    @include md {
+      padding: $section-padding-tablet 0;
+    }
+
+    @include lg {
+      padding: $section-padding-desktop 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f9fafb;
+      z-index: -1;
+
+      :global(.dark) & {
+        background-color: #111827;
+      }
     }
   }
-}
 
-.sectionHeader {
-  text-align: center;
-  max-width: 48rem;
-  margin: 0 auto 4rem;
-}
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
 
-.sectionTitle {
-  font-size: $font-size-3xl;
-  font-weight: $font-weight-bold;
-  margin-bottom: 1rem;
-  
-  @include md {
-    font-size: $font-size-4xl;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
   }
-}
 
-.sectionDescription {
-  font-size: $font-size-lg;
-  color: $light-text-color;
-  line-height: $line-height-relaxed;
-  
-  @include md {
-    font-size: $font-size-xl;
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
-}
 
-.featuresGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  
-  @include sm {
-    grid-template-columns: repeat(2, 1fr);
+  .sectionHeader {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 48px;
   }
-  
-  @include lg {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+
+  .sectionLabel {
+    display: block;
+    color: #7c3aed;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
   }
+
+  .sectionTitle {
+    font-size: 35px;
+    font-weight: $font-weight-bold;
+    margin-bottom: 16px;
+    color: $text-color;
+
+    @include md {
+      font-size: 43px;
+    }
+  }
+
+  .sectionDescription {
+    font-size: $font-size-lg;
+    color: $light-text-color;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include lg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .featureCard {
+    background: #fff;
+    border-radius: $border-radius-xl;
+    box-shadow: $shadow-sm;
+    padding: 32px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    h3 {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 8px;
+      color: $text-color;
+    }
+
+    p {
+      color: $light-text-color;
+      font-size: $font-size-base;
+      margin: 0;
+    }
+  }
+
+  .icon {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    svg{
+      width: 26px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 55px;
+      opacity: 0.1;
+      background-color: $primary-color;
+      border-radius: $border-radius-full;
+      z-index: -2;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 37px;
+      height: 37px;
+      opacity: 0.3;
+      background-color: $primary-color;
+      border-radius: $border-radius-full;
+      transform: translate(-50% , -50%);
+      z-index: -1;
+    }
+  }
+
 }

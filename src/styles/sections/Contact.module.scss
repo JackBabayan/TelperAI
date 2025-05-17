@@ -1,0 +1,162 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.contactSection {
+  background: #fff;
+  padding: $section-padding-mobile 0;
+
+  @include md {
+    padding: $section-padding-tablet 0;
+  }
+
+  @include lg {
+    padding: $section-padding-desktop 0;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.sectionLabel {
+  color: #2196f3;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sectionTitle {
+  font-size: 35px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 12px;
+  color: $text-color;
+}
+
+.sectionDescription {
+  font-size: $font-size-lg;
+  color: $light-text-color;
+  margin-bottom: 0;
+}
+
+.form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .row {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  label {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $text-color;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: $border-radius-lg;
+    font-size: $font-size-base;
+    font-family: inherit;
+    background: #f9fafb;
+    transition: border-color $transition-fast ease;
+    resize: none;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: $primary-color;
+    background: #fff;
+  }
+
+  .phoneRow {
+    display: flex;
+    gap: 8px;
+  }
+
+  .countrySelect {
+    min-width: 70px;
+    font-size: $font-size-base;
+    border-radius: $border-radius-lg;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: $text-color;
+    padding: 0 14px;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    /* Adjust these values to move the arrow */
+    padding-right: 30px;
+  }
+
+  .phoneInput {
+    flex: 1;
+  }
+
+  .checkboxRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: $font-size-base;
+    color: $light-text-color;
+    margin-bottom: 8px;
+
+    a {
+      color: $primary-color;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+.submitButton {
+  background: $primary-color;
+  color: #fff;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  border: none;
+  border-radius: $border-radius-lg;
+  padding: 14px 0;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+  transition: background $transition-fast ease, opacity $transition-fast ease;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    background: darken($primary-color, 8%);
+  }
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

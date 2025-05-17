@@ -4,8 +4,8 @@ import React from 'react';
 import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import HowItWorks from '@/components/sections/HowItWorks';
-import Platforms from '@/components/sections/Platforms';
-import UseCase from '@/components/sections/UseCase';
+import Team from '@/components/sections/Team';
+import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <Features />
       <HowItWorks />
-      <Platforms />
-      <UseCase />
+      <Team />
+      <Contact />
     </>
   );
 }

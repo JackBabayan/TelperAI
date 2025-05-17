@@ -24,31 +24,27 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-    @include heading-1;
-}
 
-h2 {
-    @include heading-2;
-}
 
-h3 {
-    @include heading-3;
+h1, h2, h3, h4, h5, h6 {
+    color: $text-color;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    margin-bottom: 16px;
+    
+    :global(.dark) & {
+        color: white;
+    }
 }
 
 p {
-    @include paragraph;
-    margin-bottom: 1rem;
+    line-height: $line-height-relaxed;
 }
 
 a {
     color: $primary-color;
     text-decoration: none;
     transition: color $transition-fast ease;
-
-    &:hover {
-        color: darken($primary-color, 10%);
-    }
 }
 
 button {
@@ -61,10 +57,11 @@ button {
 ul,
 ol {
     list-style-position: inside;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 img {
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -74,18 +71,18 @@ img {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 16px;
 
     @include md {
-        padding: 0 2rem;
+        padding: 0 32px;
     }
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 64px 0;
 
-    @include md {
-        padding: 6rem 0;
+    @include lg {
+        padding: 96px 0;
     }
 }
 
@@ -116,17 +113,6 @@ img {
         display: none;
     }
 }
-
-.btn {
-    &-primary {
-        @include button-primary;
-    }
-
-    &-secondary {
-        @include button-secondary;
-    }
-}
-
 /* Анимации для прокрутки */
 .fade-in {
     @include fade-in;

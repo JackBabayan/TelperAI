@@ -11,6 +11,19 @@ import { AiFillAndroid, AiFillApple } from 'react-icons/ai';
 import Button from '@/components/ui/Button';
 import styles from '@/styles/pages/Download.module.scss';
 
+// Компонент загрузки
+function LoadingFallback() {
+  return (
+    <div className={styles.downloadPage}>
+      <div className="container">
+        <div className={styles.loadingState}>
+          <h1>Загрузка...</h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Клиентский компонент для содержимого
 function DownloadContent() {
   const [selectedPlatform, setSelectedPlatform] = useState('android');
@@ -18,18 +31,24 @@ function DownloadContent() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    // Проверяем хэш в URL
-    const hash = window.location.hash.substring(1);
-    if (hash === 'android' || hash === 'ios') {
-      setSelectedPlatform(hash);
-    }
-    // Проверяем query параметры
-    const platform = searchParams.get('platform');
-    if (platform === 'android' || platform === 'ios') {
-      setSelectedPlatform(platform);
-    }
+    const initializePlatform = () => {
+      // Проверяем хэш в URL
+      const hash = window.location.hash.substring(1);
+      if (hash === 'android' || hash === 'ios') {
+        setSelectedPlatform(hash);
+        return;
+      }
+      // Проверяем query параметры
+      const platform = searchParams.get('platform');
+      if (platform === 'android' || platform === 'ios') {
+        setSelectedPlatform(platform);
+      }
+    };
 
-    // Предзагрузка изображений
+    initializePlatform();
+  }, [searchParams]);
+
+  useEffect(() => {
     const preloadImages = async () => {
       const imageUrls = [
         '/images/android-mockup.png',
@@ -41,25 +60,25 @@ function DownloadContent() {
       try {
         await Promise.all(
           imageUrls.map(url => {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
               const img = new Image();
               img.onload = resolve;
-              img.onerror = resolve; // Разрешаем промис даже при ошибке
+              img.onerror = resolve;
               img.src = url;
             });
           })
         );
-        setImagesLoaded(true);
       } catch (error) {
         console.error('Error preloading images:', error);
-        setImagesLoaded(true); // Все равно устанавливаем true, чтобы показать контент
+      } finally {
+        setImagesLoaded(true);
       }
     };
 
     preloadImages();
-  }, [searchParams]);
+  }, []);
 
-  const platforms = {
+  const guides = {
     android: {
       icon: <AiFillAndroid />,
       name: 'Android',
@@ -145,23 +164,23 @@ function DownloadContent() {
             <div className={styles.platformSpecs}>
               <div className={styles.specItem}>
                 <span className={styles.specLabel}>Версия</span>
-                <span className={styles.specValue}>{platforms[selectedPlatform].version}</span>
+                <span className={styles.specValue}>{guides[selectedPlatform].version}</span>
               </div>
               <div className={styles.specItem}>
                 <span className={styles.specLabel}>Размер</span>
-                <span className={styles.specValue}>{platforms[selectedPlatform].size}</span>
+                <span className={styles.specValue}>{guides[selectedPlatform].size}</span>
               </div>
               <div className={styles.specItem}>
                 <span className={styles.specLabel}>Требования</span>
-                <span className={styles.specValue}>{platforms[selectedPlatform].requirements}</span>
+                <span className={styles.specValue}>{guides[selectedPlatform].requirements}</span>
               </div>
             </div>
             
-            <h2>Tellper для {platforms[selectedPlatform].name}</h2>
-            <p className={styles.platformDescription}>{platforms[selectedPlatform].description}</p>
+            <h2>Tellper для {guides[selectedPlatform].name}</h2>
+            <p className={styles.platformDescription}>{guides[selectedPlatform].description}</p>
             
             <ul className={styles.featureList}>
-              {platforms[selectedPlatform].features.map((feature, index) => (
+              {guides[selectedPlatform].features.map((feature, index) => (
                 <li key={index}>
                   <span className={styles.featureIcon}>✓</span>
                   <span>{feature}</span>
@@ -171,20 +190,20 @@ function DownloadContent() {
             
             <div className={styles.downloadActions}>
               <Button 
-                href={platforms[selectedPlatform].downloadUrl} 
+                href={guides[selectedPlatform].downloadUrl} 
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="primary" 
                 size="large"
                 icon={<FiDownload />}
               >
-                Скачать для {platforms[selectedPlatform].name}
+                Скачать для {guides[selectedPlatform].name}
               </Button>
               
               <div className={styles.qrCode}>
                 <Image
-                  src={platforms[selectedPlatform].qrCode}
-                  alt={`QR код для скачивания Tellper для ${platforms[selectedPlatform].name}`}
+                  src={guides[selectedPlatform].qrCode}
+                  alt={`QR код для скачивания Tellper для ${guides[selectedPlatform].name}`}
                   width={120}
                   height={120}
                   onError={(e) => {
@@ -198,8 +217,8 @@ function DownloadContent() {
           
           <div className={styles.downloadImage}>
             <Image
-              src={platforms[selectedPlatform].image}
-              alt={`Tellper для ${platforms[selectedPlatform].name}`}
+              src={guides[selectedPlatform].image}
+              alt={`Tellper для ${guides[selectedPlatform].name}`}
               width={300}
               height={600}
               className={styles.phoneImage}
@@ -231,19 +250,6 @@ function DownloadContent() {
               <li>Начните использовать Tellper в любом приложении для обмена сообщениями</li>
             </ol>
           )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Компонент загрузки
-function LoadingFallback() {
-  return (
-    <div className={styles.downloadPage}>
-      <div className="container">
-        <div className={styles.loadingState}>
-          <h1>Загрузка...</h1>
         </div>
       </div>
     </div>

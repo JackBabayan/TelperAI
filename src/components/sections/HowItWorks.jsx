@@ -2,37 +2,51 @@
 
 'use client';
 
-import React from 'react';
+import React , {useState} from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { ArrowIcon } from "@/styles/icon";
+
 import styles from '@/styles/sections/HowItWorks.module.scss';
 
 const HowItWorks = () => {
+
+  const [type , setType] = useState(1)
   const steps = [
     {
       number: '01',
-      title: 'Нажмите и говорите',
-      description: 'На Android нажмите плавающую кнопку микрофона, которая появляется над клавиатурой. На iOS используйте кнопку микрофона в расширении клавиатуры.',
-      image: '/images/step-1.png'
+      title: 'Tap and speak',
+      description: "On Android, tap the floating mic button that appears above your keyboard. On iOS, use our keyboard extension's mic button.",
+      imageAndroid: '/images/step-1-and.png',
+      imageIOS: '/images/step-1-ios.png'
     },
     {
       number: '02',
-      title: 'AI обработка',
-      description: 'Ваш голосовой ввод расшифровывается и улучшается нашим продвинутым искусственным интеллектом, использующим технологию DeepSeek.',
-      image: '/images/step-2.png'
+      title: 'Tap to stop',
+      description: 'After you finished your sentence, tap again to stop recording and start processing. You can record your request up to 2 minutes.',
+      imageAndroid: '/images/step-2-and.png',
+      imageIOS: '/images/step-2-ios.png'
     },
     {
       number: '03',
-      title: 'Готовое сообщение',
-      description: 'Отполированный, готовый к отправке ответ появляется в вашем текстовом поле - просмотрите и отправьте с уверенностью.',
-      image: '/images/step-3.png'
+      title: 'AI Processing',
+      description: 'Your voice input is processed and enhanced by advanced combination of AI technology',
+      imageAndroid: '/images/step-3-and.png',
+      imageIOS: '/images/step-3-ios.png'
+    },
+    {
+      number: '04',
+      title: 'Ready to Send',
+      description: 'A polished, ready-to-send response appears in your text field - review and send with confidence',
+      imageAndroid: '/images/step-4-and.png',
+      imageIOS: '/images/step-4-ios.png'
     }
   ];
-  
+
   return (
     <section id="howitworks" className={styles.howItWorks}>
       <div className="container">
-        <motion.div 
+        <motion.div
           className={styles.sectionHeader}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,16 +54,38 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className={styles.sectionTitle}>
-            Как работает Tellper
+            How Tellper works
           </h2>
           <p className={styles.sectionDescription}>
-            Всего три простых шага для улучшения вашего общения в любом приложении
+            Only 4 steps to improve your conversation in any application
           </p>
         </motion.div>
-        
+
+        <motion.div
+          className={styles.sectionHeaderBtn}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+        >
+
+
+          <h4>
+            Select your device type
+          </h4>
+          <div className={styles.devices}>
+            <div className={styles.deviceType} onClick={() => setType(1)}>
+              Android
+            </div>
+            <div className={styles.deviceType} onClick={() => setType(2)}>
+              IOS
+            </div>
+          </div>
+        </motion.div>
+
         <div className={styles.stepsContainer}>
           {steps.map((step, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               className={styles.step}
               initial={{ opacity: 0, y: 30 }}
@@ -62,22 +98,20 @@ const HowItWorks = () => {
                 <h3 className={styles.stepTitle}>{step.title}</h3>
                 <p className={styles.stepDescription}>{step.description}</p>
               </div>
-              
+
               <div className={styles.stepImage}>
-                <Image 
-                  src={step.image}
+                <Image
+                  src={ type == 1 ? step.imageAndroid :  step.imageIOS}
                   alt={step.title}
                   width={300}
                   height={600}
                   className={styles.image}
                 />
               </div>
-              
+
               {index < steps.length - 1 && (
                 <div className={styles.connector}>
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6.66667V33.3333M20 33.3333L33.3333 20M20 33.3333L6.66667 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <ArrowIcon />
                 </div>
               )}
             </motion.div>

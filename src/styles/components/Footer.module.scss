@@ -3,25 +3,19 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-.footer {
-  background-color: #f9fafb;
-  padding: 4rem 0 2rem;
+.footerInner {
+  padding: 64px 0 32px;
+  background-color: $dark-background-light;
   
   :global(.dark) & {
     background-color: #111827;
   }
 }
 
-.footerInner {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
 .footerMain {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 48px;
   
   @include md {
     grid-template-columns: 1fr 1fr;
@@ -35,83 +29,38 @@
 .footerBrand {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-xl;
-  color: $text-color;
-  gap: 0.75rem;
-  
-  :global(.dark) & {
-    color: white;
-  }
-  
-  span {
-    background: linear-gradient(90deg, $primary-color, $secondary-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  max-width: 150px;
 }
 
 .description {
   color: $light-text-color;
   font-size: $font-size-base;
   line-height: $line-height-relaxed;
-  max-width: 25rem;
-}
-
-.social {
-  display: flex;
-  gap: 1.25rem;
-  margin-top: 0.5rem;
-  
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: $border-radius-full;
-    background-color: rgba($light-text-color, 0.1);
-    color: $text-color;
-    transition: all $transition-fast ease;
-    
-    :global(.dark) & {
-      color: white;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    &:hover {
-      background-color: $primary-color;
-      color: white;
-      transform: translateY(-3px);
-    }
-  }
+  max-width: 400px;
 }
 
 .footerNav {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 3rem;
+  gap: 48px;
   
   @include sm {
     grid-template-columns: repeat(2, 1fr);
   }
   
   @include md {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .footerNavGroup {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .footerNavTitle {
@@ -130,7 +79,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  gap: 14px;
   
   li a {
     color: $light-text-color;
@@ -151,40 +100,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba($light-text-color, 0.2);
+  gap: 24px;
+  padding: 12px 0;
   
+  .copyright {
+    color: $text-color;
+    font-size: $font-size-sm;
+  }
   @include md {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-.copyright {
-  color: $light-text-color;
-  font-size: $font-size-sm;
-  
-  :global(.dark) & {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-.footerLinks {
-  display: flex;
-  gap: 1.5rem;
-  
-  a {
-    color: $light-text-color;
-    font-size: $font-size-sm;
-    transition: color $transition-fast ease;
-    
-    :global(.dark) & {
-      color: rgba(255, 255, 255, 0.5);
-    }
-    
-    &:hover {
-      color: $primary-color;
-    }
   }
 }
