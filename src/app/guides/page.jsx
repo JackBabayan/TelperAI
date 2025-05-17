@@ -1,104 +1,115 @@
-// app/privacy/page.jsx
+import React from "react";
+import Contact from '@/components/sections/Contact';
+import Hero from '@/components/sections/Hero';
+import styles from "@/styles/pages/Guides.module.scss";
 
-export default function Privacy() {
-    return (
-      <div className="container" style={{ padding: '80px 0' }}>
-        <div className="content">
-          <h1 style={{ marginBottom: '32px' }}>Политика конфиденциальности</h1>
-          
-          <p>Последнее обновление: 1 марта 2024 г.</p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>1. Введение</h2>
-          <p>
-            Добро пожаловать в Tellper ("мы", "наш", "нас"). Мы стремимся защищать вашу
-            конфиденциальность и личную информацию. Эта Политика конфиденциальности объясняет, как мы собираем,
-            используем и защищаем ваши данные при использовании нашего приложения Tellper.
-          </p>
-          <p>
-            Используя приложение Tellper, вы соглашаетесь с условиями этой Политики конфиденциальности.
-            Если вы не согласны с этой политикой, пожалуйста, не используйте наше приложение.
-          </p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>2. Информация, которую мы собираем</h2>
-          <p>Мы можем собирать следующие типы информации:</p>
-          <ul>
-            <li><strong>Информация, которую вы предоставляете:</strong> Когда вы регистрируетесь в Tellper, мы собираем информацию, которую вы предоставляете, такую как имя, электронная почта и пароль.</li>
-            <li><strong>Информация об устройстве:</strong> Мы собираем информацию о вашем устройстве, включая модель, операционную систему, уникальные идентификаторы устройства и информацию о сети.</li>
-            <li><strong>Речевые данные:</strong> Когда вы используете функцию голосового ввода, мы временно собираем и обрабатываем ваш голосовой ввод для преобразования его в текст.</li>
-            <li><strong>Данные об использовании:</strong> Мы собираем информацию о том, как вы взаимодействуете с нашим приложением, включая действия, выполняемые в приложении, и частоту использования.</li>
-          </ul>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>3. Как мы используем вашу информацию</h2>
-          <p>Мы используем собранную информацию для:</p>
-          <ul>
-            <li>Предоставления и поддержания наших услуг</li>
-            <li>Обработки ваших голосовых запросов и преобразования их в отформатированный текст</li>
-            <li>Персонализации пользовательского опыта</li>
-            <li>Улучшения нашего приложения и услуг</li>
-            <li>Общения с вами, включая отправку уведомлений и обновлений</li>
-            <li>Анализа использования и оптимизации производительности</li>
-            <li>Обнаружения, предотвращения и устранения технических проблем или проблем безопасности</li>
-          </ul>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>4. Безопасность данных</h2>
-          <p>
-            Безопасность ваших данных важна для нас. Мы используем коммерчески приемлемые меры для защиты
-            вашей личной информации, включая шифрование в процессе передачи и безопасное хранение данных.
-            Однако, помните, что ни один метод передачи по Интернету или электронному хранению не является 
-            100% безопасным.
-          </p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>5. Передача данных</h2>
-          <p>
-            Мы можем передавать ваши данные следующим третьим сторонам:
-          </p>
-          <ul>
-            <li><strong>Поставщики услуг:</strong> Мы можем использовать сторонние компании и физических лиц для предоставления услуг от нашего имени.</li>
-            <li><strong>Партнеры по бизнесу:</strong> Мы можем делиться вашей информацией с нашими деловыми партнерами для предложения определенных продуктов, услуг или рекламных акций.</li>
-            <li><strong>Соблюдение закона:</strong> Мы можем раскрывать вашу информацию, если этого требует закон или в ответ на законные запросы от органов власти.</li>
-          </ul>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>6. Ваши права</h2>
-          <p>
-            В зависимости от вашего местоположения, вы можете иметь определенные права в отношении ваших персональных данных, включая:
-          </p>
-          <ul>
-            <li>Право на доступ к вашей информации</li>
-            <li>Право на исправление неточной информации</li>
-            <li>Право на удаление вашей информации</li>
-            <li>Право на ограничение обработки</li>
-            <li>Право на переносимость данных</li>
-            <li>Право на возражение против обработки</li>
-          </ul>
-          <p>
-            Чтобы воспользоваться любым из этих прав, пожалуйста, свяжитесь с нами по адресу privacy@tellper.com.
-          </p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>7. Дети</h2>
-          <p>
-            Наше приложение не предназначено для детей младше 13 лет, и мы сознательно не собираем личную информацию 
-            от детей младше 13 лет. Если вы родитель или опекун и знаете, что ваш ребенок предоставил нам личную 
-            информацию, пожалуйста, свяжитесь с нами, и мы предпримем шаги для удаления этой информации из наших серверов.
-          </p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>8. Изменения в этой политике конфиденциальности</h2>
-          <p>
-            Мы можем обновлять нашу Политику конфиденциальности время от времени. Мы уведомим вас о любых изменениях, 
-            разместив новую Политику конфиденциальности на этой странице и обновив дату «последнего обновления» в верхней части этой Политики конфиденциальности.
-          </p>
-          <p>
-            Вам рекомендуется периодически просматривать эту Политику конфиденциальности на предмет изменений.
-          </p>
-          
-          <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>9. Свяжитесь с нами</h2>
-          <p>
-            Если у вас есть вопросы по этой Политике конфиденциальности, пожалуйста, свяжитесь с нами:
-          </p>
-          <p>
-            По электронной почте: privacy@tellper.com<br />
-            По почте: Tellper Inc., 123 Tech Street, San Francisco, CA 94107, USA
-          </p>
+export default function Guides() {
+  return (
+    <>
+      <Hero />
+
+      <div className={styles.guidesRoot}>
+        <div className={styles.ycBanner}>
+          Submitted to <span className={styles.yc}>Y Combinator</span>’s Summer 2025 batch.
+        </div>
+        <div className={styles.guidesContainer}>
+          <h1 className={styles.guidesTitle}>Get the most from Tellper</h1>
+          <div className={styles.guidesSubtitle}>
+            This is a quick guide for writing better instructions to help Tellper output your best results. Each feature is explained with tips and real-world usage.
+          </div>
+
+          {/* 01 Specify Your Audience */}
+          <div className={styles.guidesSection}>
+            <div className={styles.guidesNum}>01</div>
+            <div>
+              <div className={styles.guidesSectionTitle}>Specify Your Audience</div>
+              <div className={styles.guidesSectionDesc}>Tellper tailors responses for your target reader. Specify who the message is for to get more relevant, effective output.</div>
+              <ul className={styles.guidesList}>
+                <li>Work example: <span>“My sales manager about X topic”</span></li>
+                <li>Personal example: <span>“My friend who's feeling stressed”</span></li>
+                <li>Family example: <span>“My younger brother about school”</span></li>
+                <li>Wildcard template: <span>“Responding to my boss's email about [topic]”</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 02 Conversation Context */}
+          <div className={styles.guidesSectionBg}>
+            <div className={styles.guidesNum}>02</div>
+            <div>
+              <div className={styles.guidesSectionTitle}>Conversation Context</div>
+              <div className={styles.guidesSectionDesc}>Include details about the situation, previous messages, or the goal of your reply. The more context you provide, the more accurate and helpful Tellper's response will be.</div>
+              <ul className={styles.guidesList}>
+                <li>New conversation: <span>“Having a conversation with a client about X deal”</span></li>
+                <li>Follow-up: <span>“Replying to someone who just asked about [topic]”</span></li>
+                <li>Problem: <span>“They're upset about a missed deadline”</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 03 Language Preferences */}
+          <div className={styles.guidesSection}>
+            <div className={styles.guidesNum}>03</div>
+            <div>
+              <div className={styles.guidesSectionTitle}>Language Preferences</div>
+              <div className={styles.guidesSectionDesc}>Tellper can write in any language. Specify your preferred language or ask for translation.</div>
+              <ul className={styles.guidesList}>
+                <li>Spanish language: <span>“Respond in Spanish to [message]”</span></li>
+                <li>Professional translation: <span>“Make this more formal and translate to French”</span></li>
+                <li>Polished response: <span>“Make my sentence sound better in [target language]”</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 04 Tone Adjustment */}
+          <div className={styles.guidesSectionBg}>
+            <div className={styles.guidesNum}>04</div>
+            <div>
+              <div className={styles.guidesSectionTitle}>Tone Adjustment</div>
+              <div className={styles.guidesSectionDesc}>Set the tone for your message: friendly, formal, concise, or enthusiastic. Tellper adapts the style to fit your needs.</div>
+              <ul className={styles.guidesList}>
+                <li>Friendly: <span>“Make it sound more cheerful”</span></li>
+                <li>Formal: <span>“Write a professional response about [topic]”</span></li>
+                <li>Concise: <span>“Summarize my message in 2 sentences”</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 05 Message Structure */}
+          <div className={styles.guidesSection}>
+            <div className={styles.guidesNum}>05</div>
+            <div>
+              <div className={styles.guidesSectionTitle}>Message Structure</div>
+              <div className={styles.guidesSectionDesc}>Request a specific structure: bullet points, numbered lists, or a summary. This helps Tellper format your message for clarity and impact.</div>
+              <ul className={styles.guidesList}>
+                <li>Bullet points: <span>“Make a bulleted list of key ideas”</span></li>
+                <li>Numbered steps: <span>“Summarize my response as a step-by-step guide”</span></li>
+                <li>Summary: <span>“Summarize the conversation in 3 sentences”</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Best Practices */}
+          <div className={styles.guidesBest}>
+            <h2 className={styles.guidesBestTitle}>Best Practices</h2>
+            <div className={styles.guidesBestDesc}>
+              Follow these tips to help Tellper deliver your best results. These recommendations will help you write clear, effective instructions for any scenario:
+            </div>
+            <ul className={styles.guidesBestList}>
+              <li>Always specify who the message is for and your relationship</li>
+              <li>Include relevant context and your communication goal</li>
+              <li>State your preferred language and tone</li>
+              <li>Request a specific structure if needed</li>
+              <li>Review and edit the output for accuracy and tone</li>
+            </ul>
+            <div className={styles.guidesBestNote}>
+              Remember: the more context and detail you provide, the better the result!<br />
+              <span className={styles.highlight}>Questions or ideas for improvement? Email: info@tellper.app</span>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  }
+      <Contact />
+    </>
+  );
+}
