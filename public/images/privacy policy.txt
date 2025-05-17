@@ -1,0 +1,128 @@
+Privacy Policy
+Last Updated: May 15, 2025
+1. Introduction
+Welcome to Tellper ("we," "our," or "us"). Your privacy is critically important to us. This Privacy Policy explains how we collect, use, store, process, and share your information when you use our conversation assistant application (the "App").This policy is designed to help you understand:
+	•	What information we collect and why
+	•	How your information is used and protected
+	•	Your rights regarding your information
+	•	How to contact us with questions or concerns
+By downloading, installing, or using our App, you agree to the collection and use of information as described in this policy. If you do not agree with our policies and practices, please do not use our App.
+2. Information We Collect
+2.1 Personal Information You Provide
+	•	Audio Recordings: When you use our microphone feature, we temporarily record your voice to process and transcribe it.
+	•	Transcribed Text: Text converted from your voice recordings by our voice recognition technology.
+	•	Device Information: Information about your device, including device type, operating system version, and unique device identifiers.
+	•	Usage Information: How you interact with our App, including features used and interactions performed.
+2.2 Sensitive Personal Information
+Our App processes the following sensitive information with special protections:
+	•	Voice Data: Audio recordings of your voice when using the microphone feature.
+	•	Accessibility Service Data: Information about text fields and interface elements across your device to provide our core functionality.
+2.3 Information Collected Automatically
+	•	Device and Network Information: Your IP address, device identifiers, mobile network information, and operating system.
+	•	Performance Data: App performance metrics to help us improve service quality.
+	•	Usage Statistics: Anonymous usage statistics to identify trends and improve functionality.
+3. How We Collect Information
+We collect information through the following methods:
+	•	Directly from you: When you provide voice input through our microphone feature.
+	•	Automatically: When you use our App, we automatically collect certain technical information.
+	•	Through system permissions: Our App requires certain permissions to function properly, including:
+	•	Accessibility Service permission (to detect text fields and insert text)
+	•	Overlay permission (to display the floating microphone button)
+	•	Microphone permission (to record your voice)
+	•	Internet permission (to process voice and text)
+4. How We Use Your Information
+We use your information for the following purposes:
+4.1 Core Services
+	•	To transcribe your voice recordings into text
+	•	To process your text through AI to generate improved responses
+	•	To insert the enhanced text into your active text field
+	•	To display the floating microphone button when relevant
+4.2 Service Improvement
+	•	To analyze App usage patterns to enhance functionality
+	•	To diagnose technical issues and optimize performance
+	•	To improve voice recognition accuracy and AI response quality
+4.3 Legal Requirements
+	•	To comply with applicable laws and regulations
+	•	To respond to legal requests and prevent harm
+5. Data Processing and AI
+5.1 Voice Processing
+Voice recordings are sent to OpenAI's Whisper API for transcription. These recordings are:
+	•	Temporarily processed to convert speech to text
+	•	Not stored permanently by OpenAI
+	•	Transmitted securely using encryption
+5.2 Text Processing
+Transcribed text is processed by DeepSeek to generate enhanced responses. This processing:
+	•	Occurs on secure, encrypted servers
+	•	Follows strict data privacy protocols
+	•	Does not retain your conversation data beyond the immediate processing needs
+5.3 AI Learning
+Our AI systems may learn from aggregated, anonymized patterns to improve service quality. We do not use your specific conversations to train AI models without explicit consent.
+6. Data Sharing and Disclosure
+6.1 Third-Party Service Providers
+We share information with the following service providers to deliver our services:
+	•	OpenAI (Whisper API): For speech-to-text transcription
+	•	DeepSeek: For AI text processing and response generation
+	•	Firebase Analytics: For anonymous usage statistics collection
+All service providers are bound by strict data protection agreements and are prohibited from using your data for any purpose other than providing the specific services to us.
+6.2 Legal Requirements
+We may disclose your information if required by law, regulation, legal process, or governmental request.
+6.3 Business Transfers
+In the event of a merger, acquisition, or sale of all or part of our assets, user information may be transferred as part of the transaction. We will notify you via email and/or prominent notice on our website of any such change in ownership.
+7. Data Retention
+We retain your information for the following periods:
+	•	Audio Recordings: Temporarily stored only for the duration needed to transcribe (typically less than 1 minute) and then immediately deleted.
+	•	Transcribed Text: Temporarily stored only during the session to process and generate responses, then deleted once processing is complete.
+	•	Usage Data: Retained for up to 90 days to analyze trends and improve our services.
+8. Data Security
+We implement industry-standard security measures to protect your information:
+	•	Encryption: All data transmitted between your device and our servers is encrypted using SSL/TLS.
+	•	Secure Storage: We use encrypted storage for any temporarily stored data.
+	•	Access Controls: Only authorized personnel have access to systems that process your data.
+	•	Regular Audits: We conduct regular security assessments to ensure data protection.
+While we take reasonable precautions, no method of transmission or storage is 100% secure. We cannot guarantee absolute security of your information.
+9. Your Privacy Rights
+Depending on your location, you may have the following rights regarding your personal information:
+	•	Right to Access: Request access to the personal information we hold about you.
+	•	Right to Correction: Request correction of inaccurate or incomplete information.
+	•	Right to Deletion: Request deletion of your personal information under certain circumstances.
+	•	Right to Restriction: Request that we restrict the processing of your information.
+	•	Right to Data Portability: Request a copy of your information in a structured, machine-readable format.
+	•	Right to Object: Object to our processing of your personal information.
+To exercise these rights, please contact us at info@tellper.app
+10. Children's Privacy
+Our App is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If we learn that we have collected personal information from a child under 13, we will promptly delete that information.
+11. International Data Transfers
+Your information may be transferred to, stored, and processed in countries other than the one in which you reside. By using our App, you consent to the transfer of information to countries that may have different data protection rules than your country. When we transfer personal information outside of your country, we ensure appropriate safeguards are in place to protect your data and comply with applicable laws.
+12. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+13. California Privacy Rights
+Under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), California residents have specific rights regarding their personal information:
+	•	The right to know what personal information we collect and disclose
+	•	The right to delete personal information
+	•	The right to correct inaccurate personal information
+	•	The right to limit the use of sensitive personal information
+	•	The right to opt out of the sale or sharing of personal information
+We do not sell your personal information as defined under the CCPA/CPRA.
+14. European Privacy Rights
+If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have rights under the General Data Protection Regulation (GDPR). The legal basis for processing your information is:
+	•	Contractual Necessity: Processing necessary to provide you with our services.
+	•	Legitimate Interests: Processing that serves our legitimate business interests, such as improving and securing our services.
+	•	Consent: Where you have explicitly consented to the processing.
+	•	Legal Obligation: Processing necessary to comply with applicable laws.
+You have the right to lodge a complaint with a supervisory authority if you believe our processing violates applicable law.
+15. Your Choices
+15.1 Permission Controls
+You can control permissions granted to our App through your device settings:
+	•	Accessibility Service: Required to detect text fields and insert enhanced text.
+	•	Overlay Permission: Required to display the floating microphone button.
+	•	Microphone: Required to capture your voice input.
+	•	Internet: Required to process data on our servers.
+You can revoke these permissions at any time, though this may affect the functionality of the App.
+15.2 Analytics Opt-Out
+You can opt out of anonymous analytics collection by contacting us at info@tellper.app
+16. Contact Us
+If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
+	•	Email: info@tellper.app
+We will respond to your inquiry as soon as possible and within the timeframe required by applicable law.
+17. Consent
+By using our App, you acknowledge that you have read and understood this Privacy Policy and agree to its terms. If you do not agree with this Policy, please do not use our App. 

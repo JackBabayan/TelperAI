@@ -1,0 +1,103 @@
+	1.	Terms of Service
+Last Updated: May 15, 2025
+1. Introduction
+These Terms of Service ("Terms") constitute a legally binding agreement between you and Tellper Co. LLC ("Tellper," "we," "our," or "us") governing your access to and use of the Tellper application, including any updates, new features, and related services (collectively, the "Services").By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Services.
+2. Eligibility
+You must be at least 16 years old to use our Services. By using our Services, you represent and warrant that you meet this age requirement. If you are using the Services on behalf of an entity, organization, or company, you represent and warrant that you have the authority to bind that organization to these Terms.
+3. Account Registration and Security
+3.1 Account Creation
+You must create an account to use certain features of our Services. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
+3.2 Account Security
+You are responsible for safeguarding your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized access to or use of your account. We will not share your identification information with third parties.
+3.3 One Person, One Account
+Each person may maintain only one active account. Accounts registered by "bots" or automated methods are not permitted.
+4. Trial and Subscription Terms
+4.1 Limited Trial
+Upon registration, you will receive a limited trial of 10 requests. Once you have used all 10 requests, you will need to purchase a subscription to continue using the Services.
+4.2 Subscription Charges
+After your trial ends, you can purchase a subscription to continue using the Services. We will charge you from the date you convert to a paid account and on each periodic renewal until cancellation. You are responsible for all applicable taxes, and we'll charge tax when required.
+4.3 Cancellation
+You may cancel your subscription at any time. Some countries have mandatory local laws regarding cancellation rights, and nothing in these Terms overrides these laws.
+5. Acceptable Use
+a. Compliance With Laws
+You may not use our Services for any illegal, harmful, or abusive activity.
+b. Prohibited Activities
+You may not:
+	•	Use our Services in a way that infringes, misappropriates, or violates anyone's rights
+	•	Modify, copy, lease, sell, or distribute any of our Services
+	•	Attempt to or assist anyone to reverse engineer, decompile, or discover the source code or underlying components of our Services, including our models, algorithms, or systems (except to the extent this restriction is prohibited by applicable law)
+	•	Automatically or programmatically extract data or output
+	•	Represent that output was human-generated when it was not
+	•	Interfere with or disrupt our Services, including circumventing any rate limits or restrictions or bypassing any protective measures or safety mitigations
+c. Content Limitations
+You understand that:
+	•	Output may not always be accurate. You should not rely on output from our Services as a sole source of truth or factual information, or as a substitute for professional advice
+	•	You must evaluate output for accuracy and appropriateness for your use case, including using human review as appropriate, before using or sharing output from the Services
+	•	You must not use any output relating to a person for any purpose that could have a legal or material impact on that person, such as making credit, educational, employment, housing, insurance, legal, medical, or other important decisions about them
+6. Intellectual Property Rights
+6.1 Your Content
+You retain ownership of content you provide to the Services, including your inputs and the outputs generated specifically for you by the Services.
+6.2 Our Services
+Tellper owns all rights, title, and interest in and to the Services, including all intellectual property rights. We grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to use the Services subject to these Terms.
+6.3 Feedback
+If you provide feedback, ideas, or suggestions about our Services ("Feedback"), we are free to use such Feedback without compensation or attribution to you.
+7. Termination
+7.1 Termination by You
+You may stop using our Services at any time.
+7.2 Termination by Us
+We may suspend or terminate your access to the Services if:
+	•	You breach these Terms
+	•	We are required to do so by law
+	•	We decide to discontinue the Services
+7.3 Effect of Termination
+Upon termination:
+	•	Your access to the Services will cease
+	•	We will delete your user data, except usage data necessary to prevent abuse of our system through double registration or similar methods
+8. Disclaimer of Warranties
+BY USING OUR SERVICES, YOU UNDERSTAND AND AGREE THAT ALL RESOURCES WE PROVIDE ARE "AS IS" AND "AS AVAILABLE". THIS MEANS THAT WE DO NOT REPRESENT OR WARRANT TO YOU THAT:
+	1.	THE USE OF OUR RESOURCES WILL MEET YOUR NEEDS OR REQUIREMENTS
+	1.	THE USE OF OUR RESOURCES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR FREE FROM ERRORS
+	1.	THE INFORMATION OBTAINED BY USING OUR RESOURCES WILL BE ACCURATE OR RELIABLE
+	1.	ANY DEFECTS IN THE OPERATION OR FUNCTIONALITY OF ANY RESOURCES WE PROVIDE WILL BE REPAIRED OR CORRECTED
+FURTHERMORE, YOU UNDERSTAND AND AGREE THAT:
+	1.	ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF OUR RESOURCES IS DONE AT YOUR OWN DISCRETION AND RISK, AND THAT YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER OR OTHER DEVICES FOR ANY LOSS OF DATA THAT MAY RESULT FROM THE DOWNLOAD OF SUCH CONTENT
+	1.	NO INFORMATION OR ADVICE, WHETHER EXPRESSED, IMPLIED, ORAL, OR WRITTEN, OBTAINED BY YOU FROM TELLPER OR THROUGH ANY RESOURCES WE PROVIDE SHALL CREATE ANY WARRANTY, GUARANTEE, OR CONDITIONS OF ANY KIND, EXCEPT FOR THOSE EXPRESSLY OUTLINED IN THIS AGREEMENT
+9. Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TELLPER, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR LICENSORS BE LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, THAT RESULT FROM THE USE OF, OR INABILITY TO USE, THE SERVICES.IN NO EVENT WILL OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS RELATING TO THE SERVICES EXCEED THE AMOUNT PAID BY YOU TO TELLPER, IF ANY, FOR THE SERVICES DURING THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE LIABILITY.
+10. Indemnification
+You agree to defend, indemnify, and hold harmless Tellper, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees and costs, arising out of or in any way connected with your access to or use of the Services or your violation of these Terms.
+11. Third-Party Services
+11.1 Integration with Third Parties
+Our Services integrate with third-party services such as DeepSeek and OpenAI. You acknowledge that:
+	•	Third-party AI services may experience downtime, maintenance windows, or service degradation that affects Tellper's functionality
+	•	DeepSeek or OpenAI might modify their APIs with little notice, potentially disrupting app functionality until we can update
+	•	These services have their own content policies, and user inputs that violate these policies might be rejected or filtered
+	•	These services typically impose usage limits, and heavy usage could temporarily impact service availability
+	•	AI responses may sometimes be inaccurate, irrelevant, or inappropriate despite best efforts at moderation
+	•	Third-party providers might discontinue specific models or features our app relies on
+	•	All data transmitted to these services is encrypted
+	•	These services may adjust their pricing models, affecting our costs
+	•	These services might change their terms to comply with new regulations
+	•	Some AI services may restrict usage in certain countries or regions due to local regulations
+11.2 Third-Party Terms
+Your use of such third-party services may be subject to additional terms and conditions provided by the third party. By using our Services, you agree that Tellper uses third-party apps/APIs to provide functionality.
+12. App-Specific Permissions
+12.1 Accessibility Service
+On Android devices, our app requires accessibility permissions to function properly. We do not use accessibility services to abuse the Android platform; we only require this permission so our application functions properly.
+12.2 Overlay Permission
+Our app requires overlay permission to display a floating microphone button. We only use this permission as necessary for the core functionality of our application.
+13. Governing Law and Dispute Resolution
+This application is controlled by Tellper Co. LLC. It can be accessed by most countries around the world. By accessing our website or using our app, you agree that the statutes and laws of our state, without regard to the conflict of laws and the United Nations Convention on the International Sales of Goods, will apply to all matters relating to the use of our Services.Any disputes arising from these Terms or your use of the Services may be resolved via email communication. Please contact us at info@tellper.app to address any concerns.
+14. Changes to Terms
+We may modify these Terms at any time. If we do so, we will notify you through in-app notification. Your continued use of the Services after the effective date of any changes constitutes your acceptance of the modified Terms.
+15. Miscellaneous
+15.1 Entire Agreement
+These Terms constitute the entire agreement between you and Tellper regarding your use of the Services and supersede all prior agreements and understandings.
+15.2 Waiver
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of such right or provision.
+15.3 Severability
+If any provision of these Terms is held to be invalid or unenforceable, such provision shall be struck, and the remaining provisions shall be enforced.
+15.4 Assignment
+You may not assign or transfer these Terms without our prior written consent, but we may assign or transfer these Terms without restriction.
+16. Contact Information
+If you have any questions about these Terms, please contact us at info@tellper.app.Tellper Co. LLC11 Southgate Blvd C25 E10465New Castle, Delaware 19720 

@@ -8,21 +8,23 @@ import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 import useStore from '@/store/store';
 import Button from '@/components/ui/Button';
 import styles from '@/styles/components/Header.module.scss';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Header = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const { isMenuOpen, toggleMenu, closeMenu, activeSection, setActiveSection } = useStore();
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Хук для обработки гидратации компонента
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Обработчик прокрутки для активации секций
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'features', 'howitworks', 'ourTeam' ,'guides' ,'contactUs'];
+      const sections = ['/', 'features', 'howitworks', 'ourTeam', 'guides', 'contactUs'];
 
       const currentPosition = window.scrollY + 100;
 
@@ -46,23 +48,26 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [setActiveSection]);
 
-  // Обработчик клика по навигационным ссылкам
   const handleNavClick = (section) => {
     setActiveSection(section);
     closeMenu();
+    if (!section) return;
+    if (pathname === '/' && document.getElementById(section)) {
+      document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+    } else if (pathname !== '/') {
+      router.push(`/?scrollTo=${section}`);
+    }
   };
 
-  // Список навигационных ссылок
   const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'Features', id: 'features' },
-    { name: 'How it Works', id: 'howitworks' },
-    { name: 'Our Team', id: 'ourTeam' },
-    { name: 'Contact us', id: 'contactUs' },
-    { name: 'Guides', id: 'guides' },
+    { name: 'Home', href: '/' },
+    { name: 'Features', scrollTo: 'features' },
+    { name: 'How it Works', scrollTo: 'howitworks' },
+    { name: 'Our Team', scrollTo: 'ourTeam' },
+    { name: 'Contact us', scrollTo: 'contactUs' },
+    { name: 'Guides', href: '/guides' },
   ];
 
-  // Обработчик переключения темы
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
@@ -71,7 +76,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.headerInner}>
-          <Link href="/" className={styles.logo} onClick={() => handleNavClick('home')}>
+          <Link href="/" className={styles.logo} onClick={() => handleNavClick('/')}>
             <Image
               src="/images/logo.png"
               alt="Tellper Logo"
@@ -83,18 +88,21 @@ const Header = () => {
           <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ''}`}>
             <ul className={styles.navList}>
               {navLinks.map((link) => (
-                <li key={link.id} className={styles.navItem}>
-                  <a
-                    href={`#${link.id}`}
-                    className={`${styles.navLink} ${activeSection === link.id ? styles.active : ''}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById(link.id).scrollIntoView({ behavior: 'smooth' });
-                      handleNavClick(link.id);
-                    }}
-                  >
-                    {link.name}
-                  </a>
+                <li key={link.scrollTo || link.href} className={styles.navItem}>
+                  {link.scrollTo ? (
+                    <a
+                      href={`#${link.scrollTo}`}
+                      className={`${styles.navLink} ${activeSection === link.scrollTo ? styles.active : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(link.scrollTo);
+                      }}
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} onClick={() => handleNavClick(link.href)} className={`${styles.navLink} ${activeSection === link.href ? styles.active : ''}`}>{link.name}</Link>
+                  )}
                 </li>
               ))}
             </ul>

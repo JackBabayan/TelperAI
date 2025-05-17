@@ -37,7 +37,7 @@ const Footer = () => {
                 <ul className={styles.footerNavList}>
                   <li><a href="#features">Features</a></li>
                   <li><a href="#howitworks">How it Works</a></li>
-                  <li><a href="#guides">Guides</a></li>
+                  <li><Link href="/guides">Guides</Link></li>
                 </ul>
               </div>
 
